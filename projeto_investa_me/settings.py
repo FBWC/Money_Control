@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*z%82(ogl2myx)&v3xg*&^zd#-0^#y12spp#-1t1in!w34(7mf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,11 +80,14 @@ WSGI_APPLICATION = 'projeto_investa_me.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres', 
+        'USER': 'postgres.zxpkpnvzazbsthrmtzcc', 
+        'PASSWORD': 'Fi160820232024$$$',
+        'HOST': 'aws-0-us-west-1.pooler.supabase.com', 
+        'PORT': '6543'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
